@@ -13,6 +13,9 @@ public class ProductDAOImpl implements ProductDAO {
 
     public void addProduct(ProductTableEntity newProduct) {
 
+       /* newProduct.setId(123);
+        session.save(newProduct);*/
+
     }
 
     public void updateProduct(ProductTableEntity existingProduct) {
