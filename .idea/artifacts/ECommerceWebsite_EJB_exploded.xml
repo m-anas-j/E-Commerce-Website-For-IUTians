@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="ECommerceWebsite:EJB exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ECommerceWebsite_EJB_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ECommerceWebsite/ejb/EJB" />
+      <element id="module-output" name="ECommerceWebsite" />
+    </root>
+  </artifact>
+</component>
