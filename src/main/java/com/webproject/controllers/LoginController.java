@@ -22,11 +22,13 @@ public class LoginController {
     }
 
     @RequestMapping("/")
-    public String testpage()
+    public ModelAndView testpage()
     {
-        ProductDAO yay = new ProductDAOImpl();
+        /*ProductDAO yay = new ProductDAOImpl();
         ProductTableEntity yay1 = new ProductTableEntity();
-        yay.addProduct(yay1);
-        return "main-page";
+        yay.addProduct(yay1);*/
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("main-page");
+        return mv;
     }
 }

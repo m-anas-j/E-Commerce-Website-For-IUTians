@@ -29,6 +29,22 @@
             <version>5.3.7.Final</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>3.2.3.ga</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-tools</artifactId>
+            <version>5.3.7.Final</version>
+        </dependency>
+        <!-- Thanks for using https://jar-download.com -->
+
+
+
         <!-- https://mvnrepository.com/artifact/com.hynnet/oracle-driver-ojdbc6 -->
         <dependency>
             <groupId>com.oracle</groupId>
