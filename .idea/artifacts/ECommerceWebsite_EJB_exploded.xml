@@ -4,6 +4,9 @@
     <root id="root">
       <element id="javaee-facet-resources" facet="ECommerceWebsite/ejb/EJB" />
       <element id="module-output" name="ECommerceWebsite" />
+      <element id="javaee-facet-resources" facet="E-Commerce-Website-For-IUTians/ejb/EJB" />
+      <element id="module-output" name="E-Commerce-Website-For-IUTians" />
+      <element id="javaee-facet-resources" facet="E-Commerce-Website-For-IUTians/ejb/EJB" />
     </root>
   </artifact>
 </component>

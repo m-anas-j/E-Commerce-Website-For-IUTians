@@ -1,6 +1,9 @@
 package com.webproject.controllers;
 
 
+import com.webproject.dao.ProductDAO;
+import com.webproject.dao.ProductDAOImpl;
+import com.webproject.entity.ProductTableEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
