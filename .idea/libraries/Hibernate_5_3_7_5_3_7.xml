@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="JPA 2.0-JPA 2.0">
+  <library name="Hibernate 5.3.7-5.3.7" type="hibernate">
+    <properties version="5.3.7" />
     <CLASSES />
     <JAVADOC />
     <SOURCES />
