@@ -66,5 +66,13 @@ public class MainPageController {
         return mv;
     }
 
+    @RequestMapping(value={"/listProducts"} )
+    public ModelAndView viewProducts(){
+        ModelAndView mv = new ModelAndView("main-page");
+        mv.addObject("title", "View Products");
+        mv.addObject("userClickViewProducts", true);
+        return mv;
+    }
+
 
 }

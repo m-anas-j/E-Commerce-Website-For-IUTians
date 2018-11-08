@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ojdbc6">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/out/artifacts/E_Commerce_Website_For_IUTians_war_exploded/WEB-INF/lib/ojdbc6.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
