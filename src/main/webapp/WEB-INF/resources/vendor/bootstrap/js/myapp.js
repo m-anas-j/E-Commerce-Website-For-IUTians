@@ -7,6 +7,9 @@ $(function () {
         case 'About Us':
             $('#about').addClass('active');
             break;
+        case 'Log In':
+            $('#login').addClass('active');
+            break;
         default:
             $('#home').addClass('active');
             break;
