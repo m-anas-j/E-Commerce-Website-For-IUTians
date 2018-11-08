@@ -6,9 +6,9 @@
     </root>
     <schema id="2" parent="1" name="WEBPROJECT">
       <ObjectId>50</ObjectId>
-      <IntrospectionTimestamp>2018-11-08.22:11:38</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-09.08:01:10</IntrospectionTimestamp>
       <CreatedTimestamp>2018-11-07.08:34:58</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-08.22:01:56</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-09.08:01:09</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -84,7 +84,7 @@
     <table id="24" parent="2" name="PRODUCT_TABLE">
       <ObjectId>33530</ObjectId>
       <CreatedTimestamp>2018-11-07.08:34:58</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-07.08:40:20</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-09.08:01:09</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <column id="25" parent="22" name="ID">
@@ -172,7 +172,11 @@
       <Position>7</Position>
       <DataType>VARCHAR2(100 byte)|0s</DataType>
     </column>
-    <index id="40" parent="24" name="SYS_C009172">
+    <column id="40" parent="24" name="DESCRIPTION">
+      <Position>8</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <index id="41" parent="24" name="SYS_C009172">
       <ObjectId>33531</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-11-07.08:34:58</CreatedTimestamp>
@@ -181,7 +185,7 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="24" name="SYS_C009172">
+    <key id="42" parent="24" name="SYS_C009172">
       <NameSurrogate>1</NameSurrogate>
       <ModifiedTimestamp>2018-11-07.08:34:58</ModifiedTimestamp>
       <ColNames>ID</ColNames>

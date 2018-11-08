@@ -1,6 +1,6 @@
 package com.webproject.dao;
 
-import com.webproject.entity.ProductTable;
+import com.webproject.entity.ProductTableEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -16,26 +16,14 @@ public class ProductDAOImpl implements ProductDAO {
     private static SessionFactory sessionFactory;
 
 
-    public ArrayList<ProductTable> getAllProducts() {
+    public ArrayList<ProductTableEntity> getAllProducts() {
         return null;
     }
 
-    public void addProduct(ProductTable newProduct) {
+    public void addProduct(ProductTableEntity newProduct) {
 
 
-        /*EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-
-        //entityManager.getTransaction().begin();
-
-        entityManager.persist(newProduct);
-        entityManager.
-
-        //entityManager.getTransaction().commit();
-
-        entityManagerFactory.close();*/
-
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(ProductTable.class);
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(ProductTableEntity.class);
         sessionFactory = configuration.buildSessionFactory();
 
 
@@ -49,11 +37,11 @@ public class ProductDAOImpl implements ProductDAO {
 
     }
 
-    public void updateProduct(ProductTable existingProduct) {
+    public void updateProduct(ProductTableEntity existingProduct) {
 
     }
 
-    public void deleteProduct(ProductTable existingProduct) {
+    public void deleteProduct(ProductTableEntity existingProduct) {
 
     }
 }

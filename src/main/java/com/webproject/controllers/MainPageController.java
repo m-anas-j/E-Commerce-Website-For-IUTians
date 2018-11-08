@@ -3,7 +3,7 @@ package com.webproject.controllers;
 
 import com.webproject.dao.ProductDAO;
 import com.webproject.dao.ProductDAOImpl;
-import com.webproject.entity.ProductTable;
+import com.webproject.entity.ProductTableEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -42,14 +42,14 @@ public class MainPageController {
     @RequestMapping(value={"/login"} )
     public ModelAndView login(){
 
-        /*ProductDAO productDAO = new ProductDAOImpl();
-        ProductTable newProduct = new ProductTable();
-        newProduct.setId(66);
+        ProductDAO productDAO = new ProductDAOImpl();
+        ProductTableEntity newProduct = new ProductTableEntity();
+        newProduct.setId(59);
         newProduct.setCategory("test2");
         newProduct.setCondition("used2");
         newProduct.setImageUrl("test2//");
         newProduct.setName("testproduct2");
-        productDAO.addProduct(newProduct);*/
+        productDAO.addProduct(newProduct);
 
         ModelAndView mv = new ModelAndView("main-page");
         mv.addObject("title", "Log In");
