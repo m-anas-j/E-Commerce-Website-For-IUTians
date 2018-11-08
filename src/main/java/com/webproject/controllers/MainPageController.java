@@ -33,7 +33,7 @@ public class MainPageController {
     public ModelAndView contact(){
 
         ModelAndView mv = new ModelAndView("main-page");
-        mv.addObject("title", "Contact");
+        mv.addObject("title", "Contact Us");
         mv.addObject("userClickContact", true);
         return mv;
     }
