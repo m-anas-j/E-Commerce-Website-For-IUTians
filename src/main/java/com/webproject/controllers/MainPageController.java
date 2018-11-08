@@ -42,14 +42,14 @@ public class MainPageController {
     @RequestMapping(value={"/login"} )
     public ModelAndView login(){
 
-        /*ProductDAO productDAO = new ProductDAOImpl();
+        ProductDAO productDAO = new ProductDAOImpl();
         ProductTableEntity newProduct = new ProductTableEntity();
-        newProduct.setId(66);
+        newProduct.setId(59);
         newProduct.setCategory("test2");
         newProduct.setCondition("used2");
         newProduct.setImageUrl("test2//");
         newProduct.setName("testproduct2");
-        productDAO.addProduct(newProduct);*/
+        productDAO.addProduct(newProduct);
 
         ModelAndView mv = new ModelAndView("main-page");
         mv.addObject("title", "Log In");
