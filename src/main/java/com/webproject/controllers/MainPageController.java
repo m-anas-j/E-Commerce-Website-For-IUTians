@@ -13,7 +13,7 @@ public class MainPageController {
 
     @RequestMapping(value={"/", "/home"} )
     public ModelAndView index(){
-
+        /*
         ProductDAO productDAO = new ProductDAOImpl();
         ProductTable newProduct = new ProductTable();
         newProduct.setId(5);
@@ -21,7 +21,7 @@ public class MainPageController {
         newProduct.setCondition("used1");
         newProduct.setImageUrl("test1//");
         newProduct.setName("testproduct1");
-        productDAO.addProduct(newProduct);
+        productDAO.addProduct(newProduct);*/
 
         ModelAndView mv = new ModelAndView("main-page");
         mv.addObject("title", "Home");
@@ -53,7 +53,7 @@ public class MainPageController {
 
         ModelAndView mv = new ModelAndView("main-page");
         mv.addObject("title", "Log In");
-        mv.addObject("userClicklogin", true);
+        mv.addObject("userClickLogin", true);
         return mv;
     }
 

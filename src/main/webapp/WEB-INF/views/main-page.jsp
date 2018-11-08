@@ -65,7 +65,7 @@
     </c:if>
 
     <!-- Load only when login is clicked -->
-    <c:if test="${userClicklogin == true}">
+    <c:if test="${userClickLogin == true}">
         <%@include file="index.jsp"%>
     </c:if>
 
