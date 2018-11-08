@@ -12,6 +12,7 @@ public class ProductTableEntity {
     private String category;
     private String condition;
     private String imageUrl;
+    private String description;
 
     @Id
     @Column(name = "ID", nullable = false, precision = 0)
@@ -83,6 +84,16 @@ public class ProductTableEntity {
         this.imageUrl = imageUrl;
     }
 
+    @Basic
+    @Column(name = "DESCRIPTION", nullable = true, length = 100)
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -97,6 +108,7 @@ public class ProductTableEntity {
         if (category != null ? !category.equals(that.category) : that.category != null) return false;
         if (condition != null ? !condition.equals(that.condition) : that.condition != null) return false;
         if (imageUrl != null ? !imageUrl.equals(that.imageUrl) : that.imageUrl != null) return false;
+        if (description != null ? !description.equals(that.description) : that.description != null) return false;
 
         return true;
     }
@@ -113,6 +125,7 @@ public class ProductTableEntity {
         result = 31 * result + (category != null ? category.hashCode() : 0);
         result = 31 * result + (condition != null ? condition.hashCode() : 0);
         result = 31 * result + (imageUrl != null ? imageUrl.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 }

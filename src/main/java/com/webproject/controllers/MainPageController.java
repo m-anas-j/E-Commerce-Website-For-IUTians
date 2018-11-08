@@ -3,7 +3,7 @@ package com.webproject.controllers;
 
 import com.webproject.dao.ProductDAO;
 import com.webproject.dao.ProductDAOImpl;
-import com.webproject.entity.ProductTable;
+import com.webproject.entity.ProductTableEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,7 +43,7 @@ public class MainPageController {
     public ModelAndView login(){
 
         /*ProductDAO productDAO = new ProductDAOImpl();
-        ProductTable newProduct = new ProductTable();
+        ProductTableEntity newProduct = new ProductTableEntity();
         newProduct.setId(66);
         newProduct.setCategory("test2");
         newProduct.setCondition("used2");
