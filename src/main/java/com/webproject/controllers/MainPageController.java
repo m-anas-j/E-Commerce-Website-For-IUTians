@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class MainPageController {
 
@@ -42,14 +45,20 @@ public class MainPageController {
     @RequestMapping(value={"/login"} )
     public ModelAndView login(){
 
-        ProductDAO productDAO = new ProductDAOImpl();
+        /*ProductDAO productDAO = new ProductDAOImpl();
         ProductTableEntity newProduct = new ProductTableEntity();
         newProduct.setId(59);
         newProduct.setCategory("test2");
         newProduct.setCondition("used2");
         newProduct.setImageUrl("test2//");
         newProduct.setName("testproduct2");
-        productDAO.addProduct(newProduct);
+        productDAO.addProduct(newProduct);*/
+
+        ProductDAO productDAO = new ProductDAOImpl();
+        List<ProductTableEntity> productList = new ArrayList<ProductTableEntity>();
+        productList = productDAO.getAllProducts();
+
+        System.out.println(productList.get(1).getName());
 
         ModelAndView mv = new ModelAndView("main-page");
         mv.addObject("title", "Log In");

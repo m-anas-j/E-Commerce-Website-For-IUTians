@@ -5,6 +5,7 @@ import com.webproject.entity.ProductTableEntity;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ProductDAO {
 
@@ -14,7 +15,7 @@ public interface ProductDAO {
     SessionFactory sf = con.buildSessionFactory();
     Session session = sf.openSession();*/
 
-    public ArrayList<ProductTableEntity> getAllProducts();
+    public List<ProductTableEntity> getAllProducts();
     public void addProduct(ProductTableEntity newProduct);
     public void updateProduct(ProductTableEntity existingProduct);
     public  void deleteProduct(ProductTableEntity existingProduct);

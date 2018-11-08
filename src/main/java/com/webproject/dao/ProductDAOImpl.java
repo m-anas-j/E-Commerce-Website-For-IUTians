@@ -8,6 +8,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDAOImpl implements ProductDAO {
 
@@ -16,8 +17,35 @@ public class ProductDAOImpl implements ProductDAO {
     private static SessionFactory sessionFactory;
 
 
-    public ArrayList<ProductTableEntity> getAllProducts() {
-        return null;
+    public List<ProductTableEntity> getAllProducts()
+    {
+        List<ProductTableEntity> productList = new ArrayList<ProductTableEntity>();
+        ProductTableEntity singleProduct = null;
+
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(ProductTableEntity.class);
+        sessionFactory = configuration.buildSessionFactory();
+
+
+        Session currentSession = sessionFactory.openSession();
+        /*long i = 1;
+
+        while (true)
+        {
+            Transaction transaction = currentSession.beginTransaction();
+            singleProduct = (ProductTableEntity) currentSession.get(ProductTableEntity.class,i);
+
+            if(singleProduct==null)
+                break;
+
+            productList.add(singleProduct);
+            transaction.commit();
+            singleProduct=null;
+
+        }*/
+        productList = currentSession.createSQLQuery("   SELECT * FROM PRODUCT_TABLE").addEntity(ProductTableEntity.class).list();
+
+
+        return productList;
     }
 
     public void addProduct(ProductTableEntity newProduct) {
