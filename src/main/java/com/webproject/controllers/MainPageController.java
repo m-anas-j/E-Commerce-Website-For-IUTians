@@ -38,5 +38,14 @@ public class MainPageController {
         return mv;
     }
 
+    @RequestMapping(value={"/login"} )
+    public ModelAndView login(){
+
+        ModelAndView mv = new ModelAndView("main-page");
+        mv.addObject("title", "Log In");
+        mv.addObject("userClicklogin", true);
+        return mv;
+    }
+
 
 }
