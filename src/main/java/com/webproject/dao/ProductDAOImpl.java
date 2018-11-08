@@ -1,14 +1,12 @@
 package com.webproject.dao;
 
-import com.webproject.entity.ProductTableEntity;
-import org.hibernate.Session;
+import com.webproject.entity.ProductTable;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.ArrayList;
 
 public class ProductDAOImpl implements ProductDAO {
@@ -17,38 +15,33 @@ public class ProductDAOImpl implements ProductDAO {
     private static SessionFactory sessionFactory;
 
 
-    public ArrayList<ProductTableEntity> getAllProducts() {
+    public ArrayList<ProductTable> getAllProducts() {
         return null;
     }
 
-    public void addProduct(ProductTableEntity newProduct) {
+    public void addProduct(ProductTable newProduct) {
 
-        newProduct.setId(123);
-        //session.save(newProduct);
-        //Configuration con = new Configuration().configure().addAnnotatedClass(ProductTableEntity.class);
-        try {
-            standardServiceRegistry = new StandardServiceRegistryBuilder().configure().build();
-            MetadataSources metadataSources = new MetadataSources(standardServiceRegistry);
-            Metadata metadata = metadataSources.getMetadataBuilder().build();
-            sessionFactory = metadata.getSessionFactoryBuilder().build();
-        }catch (Exception e)
-        {
-            System.out.println(e);
-        }
-        //SessionFactory sf = con.buildSessionFactory();
-        Session session = sessionFactory.openSession();
 
-        Transaction tx = session.beginTransaction();
-        session.save(newProduct);
-        tx.commit();
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        entityManager.getTransaction().begin();
+
+        entityManager.persist(newProduct);
+
+        entityManager.getTransaction().commit();
+
+        entityManagerFactory.close();
+
+        System.out.println("Successfully added product");
 
     }
 
-    public void updateProduct(ProductTableEntity existingProduct) {
+    public void updateProduct(ProductTable existingProduct) {
 
     }
 
-    public void deleteProduct(ProductTableEntity existingProduct) {
+    public void deleteProduct(ProductTable existingProduct) {
 
     }
 }

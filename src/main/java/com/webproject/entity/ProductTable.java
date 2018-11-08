@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "PRODUCT_TABLE", schema = "WEBPROJECT", catalog = "")
-public class ProductTableEntity {
+public class ProductTable {
     private long id;
     private String name;
     private double price;
@@ -88,7 +88,7 @@ public class ProductTableEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ProductTableEntity that = (ProductTableEntity) o;
+        ProductTable that = (ProductTable) o;
 
         if (id != that.id) return false;
         if (Double.compare(that.price, price) != 0) return false;

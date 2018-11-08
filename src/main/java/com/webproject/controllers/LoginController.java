@@ -1,12 +1,6 @@
 package com.webproject.controllers;
 
 
-import com.webproject.dao.ProductDAO;
-import com.webproject.dao.ProductDAOImpl;
-import com.webproject.entity.ProductTableEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 /*
 @Controller
 public class LoginController {
@@ -25,7 +19,7 @@ public class LoginController {
     public ModelAndView testpage()
     {
         ProductDAO yay = new ProductDAOImpl();
-        ProductTableEntity yay1 = new ProductTableEntity();
+        ProductTable yay1 = new ProductTable();
         yay.addProduct(yay1);
         ModelAndView mv = new ModelAndView();
         mv.setViewName("main-page");
