@@ -52,7 +52,7 @@
             height: 40px;
             border-radius: 10px;
             left: 50%;
-            font-family: "Product Sans";
+            font-family: "Ubuntu";
             color: whitesmoke;
             font-size: 1em;
             background: #b44b4b;
@@ -60,12 +60,12 @@
         }
         p{
             color: white;
-            font-family: "Product Sans";
+            font-family: "Ubuntu";
         }
         a
         {
             color: cornflowerblue;
-            font-family: "Product Sans";
+            font-family: "Ubuntu";
             margin-left: 80px;
         }
     </style>

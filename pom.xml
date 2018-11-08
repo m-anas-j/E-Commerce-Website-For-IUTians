@@ -47,6 +47,15 @@
             <scope>provided</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.webproject</groupId>
+            <artifactId>E-Commerce Website</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/lib/hibernate-core-5.3.7.Final.jar</systemPath>
+        </dependency>
+
     </dependencies>
 
     <repositories>

@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="ECommerceWebsite:jarexploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ECommerceWebsite_jarexploded</output-path>
+    <root id="root" />
+  </artifact>
+</component>

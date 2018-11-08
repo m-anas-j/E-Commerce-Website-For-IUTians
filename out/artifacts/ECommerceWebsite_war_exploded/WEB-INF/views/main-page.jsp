@@ -48,21 +48,26 @@
 <!-- Page Content -->
 
 <div class="content">
-<!-- Load only when home is called -->
-<c:if test="${userClickHome == true}">
-    <%@include file="home.jsp"%>
-</c:if>
+    <!-- Load only when home is called -->
+    <c:if test="${userClickHome == true}">
+        <%@include file="home.jsp"%>
+    </c:if>
 
 
-<!-- Load only when user clicks about -->
-<c:if test="${userClickAbout == true}">
-    <%@include file="about.jsp"%>
-</c:if>
+    <!-- Load only when user clicks about -->
+    <c:if test="${userClickAbout == true}">
+        <%@include file="about.jsp"%>
+    </c:if>
 
-<!-- Load only when user clicks about -->
-<c:if test="${userClickContact == true}">
-    <%@include file="contact.jsp"%>
-</c:if>
+    <!-- Load only when user clicks about -->
+    <c:if test="${userClickContact == true}">
+        <%@include file="contact.jsp"%>
+    </c:if>
+
+    <!-- Load only when login is clicked -->
+    <c:if test="${userClickLogin == true}">
+        <%@include file="index.jsp"%>
+    </c:if>
 
 </div>
 <!-- Footer -->
