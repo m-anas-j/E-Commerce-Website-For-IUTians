@@ -32,13 +32,16 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="<c:url value="/resources/images/book-main.JPG"/> " alt="First slide">
+                        <img class="d-block img-fluid" src="<c:url value="/resources/images/book-main.JPG"/> "
+                             alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="<c:url value="/resources/images/laptop.jpg"/>" alt="Second slide">
+                        <img class="d-block img-fluid" src="<c:url value="/resources/images/laptop.jpg"/>"
+                             alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="<c:url value="/resources/images/phone.jpg"/>" alt="Third slide">
+                        <img class="d-block img-fluid" src="<c:url value="/resources/images/phone.jpg"/>"
+                             alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -52,10 +55,10 @@
             </div>
 
             <div class="row">
-
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/anker_speaker.jpg"/>" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/anker_speaker.jpg"/>"
+                                         alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#">Anker Speaker</a>
@@ -71,7 +74,8 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/fan.jpg"/>" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/fan.jpg"/>"
+                                         alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#">Stormy Fan</a>
@@ -103,7 +107,8 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/desktop.jpg"/>" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/desktop.jpg"/>"
+                                         alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#">A new generation CPU</a>
@@ -119,7 +124,8 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<c:url value="/resources/images/laptop_notebook.jpg"/>" alt=""></a>
+                        <a href="#"><img class="card-img-top"
+                                         src="<c:url value="/resources/images/laptop_notebook.jpg"/>" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#">Laptop</a>

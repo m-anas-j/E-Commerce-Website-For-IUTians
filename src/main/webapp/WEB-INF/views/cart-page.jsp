@@ -1,5 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.webproject.entity.ProductTableEntity" %><%--
+<%@ page import="com.webproject.entity.ProductTableEntity" %>
+<%--
   Created by IntelliJ IDEA.
   User: User
   Date: 11/8/2018
@@ -11,14 +13,11 @@
 
     <div class="row">
 
+
         <div class="col-lg-3">
 
-            <h1 class="my-4">Shop Name</h1>
-            <div class="list-group">
-                <a href="#" class="list-group-item">Computers</a>
-                <a href="#" class="list-group-item">Gadgets</a>
-                <a href="#" class="list-group-item">Books</a>
-            </div>
+            <h1 class="my-4">Shopping Cart</h1>
+
 
         </div>
         <!-- /.col-lg-3 -->
@@ -55,39 +54,59 @@
                 </a>
             </div>
 
+
             <div class="row">
+
                 <%
-                    List<ProductTableEntity> productList = (List<ProductTableEntity>) request.getAttribute("productList");
-                    for (int i=0; i<productList.size();i++)
+                    List<ProductTableEntity> shoppingCart = (List<ProductTableEntity>) request.getAttribute("shoppingCart");
+                    if (shoppingCart == null)
                     {
+
                 %>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<c:url value="<%=productList.get(i).getImageUrl()%>"/>"
+                        <p>CART EMPTY</p>
+                    </div>
+                </div>
+                <%
+
+                    } else {
+
+
+                        for (int i = 0; i < shoppingCart.size(); i++) {
+                %>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top"
+                                         src="<c:url value="<%=shoppingCart.get(i).getImageUrl()%>"/>"
                                          alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#"><%=productList.get(i).getName()%></a>
+                                <a href="#"><%=shoppingCart.get(i).getName()%>
+                                </a>
                             </h4>
-                            <h5><%=productList.get(i).getPrice()%> bdt</h5>
-                            <p class="card-text"><%=productList.get(i).getDescription()%></p>
+                            <h5><%=shoppingCart.get(i).getPrice()*shoppingCart.get(i).getQuantity()%> bdt</h5>
+                            <p class="card-text"><%=shoppingCart.get(i).getDescription()%>
+                            </p>
+                            <form action="updateCart">
+                                <h5> Quantity: <input type="text" name="productQuantity" style="width: 75px" value="<%=shoppingCart.get(i).getQuantity()%>"> </h5>
+                                <input type="hidden" name="productId" value="<%=shoppingCart.get(i).getId()%>">
+                                <input type="submit" value="Update Cart">
+                            </form>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            <form action="addToCart">
-                                <input type="hidden" name="productId" value="<%=productList.get(i).getId()%>">
-                                <input type="submit" value="Add to cart">
-                            </form>
-                            <form action="viewCart">
-                                <input type="submit" value="View Cart">
-                            </form>
+
                         </div>
                     </div>
                 </div>
                 <%
+                        }
                     }
                 %>
             </div>
+            -
+
             <!-- /.row -->
 
         </div>

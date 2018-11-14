@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.cfg.Configuration;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,22 @@ public class ProductDAOImpl implements ProductDAO {
         return productList;
     }
 
+    public ProductTableEntity getSingleProduct(long productId) {
+
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(ProductTableEntity.class);
+        sessionFactory = configuration.buildSessionFactory();
+
+
+        Session currentSession = sessionFactory.openSession();
+
+        Transaction transaction = currentSession.beginTransaction();
+        ProductTableEntity productTableEntity = currentSession.get(ProductTableEntity.class,productId);
+        transaction.commit();
+
+        return productTableEntity;
+    }
+
+    //@Transactional
     public void addProduct(ProductTableEntity newProduct) {
 
 
@@ -64,6 +81,7 @@ public class ProductDAOImpl implements ProductDAO {
         System.out.println("Successfully added product");
 
     }
+
 
     public void updateProduct(ProductTableEntity existingProduct) {
 

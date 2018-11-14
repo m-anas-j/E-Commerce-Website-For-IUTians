@@ -74,6 +74,21 @@
         <%@include file="view-product.jsp"%>
     </c:if>
 
+    <!-- Load Confirmation Page -->
+    <c:if test="${userClickAddToCart == true}">
+        <%@include file="confirmation-page.jsp"%>
+    </c:if>
+
+    <!-- Load Cart Page -->
+    <c:if test="${userClickViewCart == true}">
+        <%@include file="cart-page.jsp"%>
+    </c:if>
+
+    <!-- Update Cart Page -->
+    <c:if test="${userClickUpdateCart == true}">
+        <%@include file="cart-page.jsp"%>
+    </c:if>
+
 </div>
 <!-- Footer -->
 

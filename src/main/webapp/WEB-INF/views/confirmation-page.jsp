@@ -1,5 +1,5 @@
-<%@ page import="java.util.List" %>
-<%@ page import="com.webproject.entity.ProductTableEntity" %><%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
   Created by IntelliJ IDEA.
   User: User
   Date: 11/8/2018
@@ -55,43 +55,10 @@
                 </a>
             </div>
 
-            <div class="row">
-                <%
-                    List<ProductTableEntity> productList = (List<ProductTableEntity>) request.getAttribute("productList");
-                    for (int i=0; i<productList.size();i++)
-                    {
-                %>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<c:url value="<%=productList.get(i).getImageUrl()%>"/>"
-                                         alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#"><%=productList.get(i).getName()%></a>
-                            </h4>
-                            <h5><%=productList.get(i).getPrice()%> bdt</h5>
-                            <p class="card-text"><%=productList.get(i).getDescription()%></p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            <form action="addToCart">
-                                <input type="hidden" name="productId" value="<%=productList.get(i).getId()%>">
-                                <input type="submit" value="Add to cart">
-                            </form>
-                            <form action="viewCart">
-                                <input type="submit" value="View Cart">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <%
-                    }
-                %>
-            </div>
-            <!-- /.row -->
 
         </div>
         <!-- /.col-lg-9 -->
+        <p>Your product has been successfully added to cart</p>
 
     </div>
     <!-- /.row -->

@@ -16,6 +16,7 @@ public interface ProductDAO {
     Session session = sf.openSession();*/
 
     public List<ProductTableEntity> getAllProducts();
+    public ProductTableEntity getSingleProduct(long productId);
     public void addProduct(ProductTableEntity newProduct);
     public void updateProduct(ProductTableEntity existingProduct);
     public  void deleteProduct(ProductTableEntity existingProduct);
