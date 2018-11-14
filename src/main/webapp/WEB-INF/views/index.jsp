@@ -13,13 +13,11 @@
 
 
     <style>
-        body
-        {
-            background: url("<c:url value="/resources/images/aesthetic1.jpg"/> ");
-            background-size: cover;
+        body {
+        <%--background: url("<c:url value="/resources/images/aesthetic1.jpg"/> ");--%> background-size: cover;
         }
-        .loginCard
-        {
+
+        .loginCard {
             height: 500px;
             width: 400px;
             top: 50%;
@@ -31,23 +29,22 @@
             box-sizing: border-box;
             transform: translate(-50%, -50%);
         }
-        .loginIcon
-        {
+
+        .loginIcon {
             margin-left: 115px;
         }
-        input[type=text], input[type=password]
-        {
+
+        input[type=text], input[type=password] {
             margin: 5px;
             padding: 5px;
-            border: 1px  solid;
+            border: 1px solid;
             height: 40px;
             width: 250px;
             border-radius: 5px;
             align-content: center;
         }
 
-        input[type=submit]
-        {
+        input[type=submit] {
             width: 350px;
             height: 40px;
             border-radius: 10px;
@@ -58,12 +55,13 @@
             background: #b44b4b;
             border: black;
         }
-        p{
+
+        p {
             color: white;
             font-family: "Ubuntu";
         }
-        a
-        {
+
+        a {
             color: cornflowerblue;
             font-family: "Ubuntu";
             margin-left: 80px;
@@ -72,7 +70,6 @@
 
 </head>
 <body>
-
 
 
 <div class="loginCard">

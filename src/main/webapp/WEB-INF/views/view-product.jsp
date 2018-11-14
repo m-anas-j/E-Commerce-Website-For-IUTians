@@ -69,7 +69,7 @@
                             <h4 class="card-title">
                                 <a href="#"><%=productList.get(i).getName()%></a>
                             </h4>
-                            <h5><%=productList.get(i).getPrice()%> bdt</h5>
+                            <h5 style="color: green"><%=productList.get(i).getPrice()%>৳</h5>
                             <p class="card-text"><%=productList.get(i).getDescription()%></p>
                         </div>
                         <div class="card-footer">

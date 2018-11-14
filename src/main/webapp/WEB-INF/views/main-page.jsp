@@ -66,7 +66,7 @@
 
     <!-- Load only when login is clicked -->
     <c:if test="${userClickLogin == true}">
-        <%@include file="index.jsp"%>
+        <%@include file="login.jsp"%>
     </c:if>
 
     <!-- Load products Page -->
@@ -87,6 +87,16 @@
     <!-- Update Cart Page -->
     <c:if test="${userClickUpdateCart == true}">
         <%@include file="cart-page.jsp"%>
+    </c:if>
+
+    <!-- User tries to log in -->
+    <c:if test="${userClickSignIn == true}">
+        <%@include file="login.jsp"%>
+    </c:if>
+
+    <!-- User Clicks sign up -->
+    <c:if test="${userClickSignUp == true}">
+        <%@include file="signup.jsp"%>
     </c:if>
 
 </div>
